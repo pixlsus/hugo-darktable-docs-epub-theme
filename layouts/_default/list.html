@@ -2,7 +2,7 @@
 
 <section>
 
-    <h1 class="title">{{ .Title }}</h1>
+   <p class="title depth-{{ .Scratch.Get "depth" }} head1">{{ .Title }}</p>
     <ul>
         {{ range .Data.Pages -}}
         <li>

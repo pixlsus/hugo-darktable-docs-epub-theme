@@ -1,139 +1,113 @@
-* {
-    widows: 5;
-    orphans: 5;
-    font-size: 1em;
-    line-height: 1.2em;
+// Major Second typographical rhythm from https://type-scale.com/
+
+html {
+    font-size: 100%; /*16px*/
 }
 
-#body {
+body {
+    background-color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #333;
+}
 
-    // The heading sizes for nested sections
+pre, code, kbd {
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9em;
+    color: navy;
+}
 
-    // Nesting level 1
-    .section {
-	break-after: always;
-	 .title {
-	    font-size: 2.323em;
-	}
-	.content{
-	    h1,
-	    h2,
-	    h3,
-	    h4,
-	    h5,
-	    h6 {
-		color: red;
-	    }
-	}
-    } // End section 1
+p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
 
-    // Nesting level 2
-    .section > .section {
-	break-after: auto;
-	.title {
-	    font-size: 2.178em;
-	    font-weight: normal;
-	    break-after: avoid;
-	}
-	.content{
-	    h1, h2, h3 {
-		color: black;
-		font-weight: normal;
-	    }
-	    h1 {
-		font-size: 2.041em;
-	    }
-	    h2 {
-		font-size: 1.913em;
-	    }
-	    h3 {
-		font-size: 1.793em;
-	    }
-	}
-    } // End Nesting level 2
+.head1, .head2, .head3, .head4, .head5 {
+    margin: 2.0rem 0 1.0rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    text-indent: -2.5rem;
+}
 
-    // Nesting level 3
-    .section > .section > .section {
-	break-after: auto;
-	.title {
-	    font-size: 1.68em;
-	    font-weight: normal;
-	    break-after: avoid;
-	}
-	.content{
-	    h1, h2, h3 {
-		color: black;
-		font-weight: normal;
-	    }
-	    h1 {
-		font-size: 1.575em;
-	    }
-	    h2 {
-		font-size: 1.476em;
-	    }
-	    h3 {
-		font-size: 1.383em;
-	    }
-	}
-    } // End section 3
+.head1.title {
+    margin-top: 0;
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: 2em;
+}
 
+.head1 {
+    font-size: 1.7em;
+}
 
-    // Nesting level 4
-    .section > .section > .section > .section {
-	break-after: auto;
-	.title {
-	    font-size: 1.2961em;
-	    font-weight: normal;
-	    break-after: avoid;
+.head1+.head2 {
+   margin-top: 0;
+}
 
-	}
-	.content{
-	    h1, h2, h3 {
-		color: black;
-		font-weight: normal;
-	    }
-	    h1 {
-		font-size: 1.215em;
-	    }
-	    h2 {
-		font-size: 1.138em;
-	    }
-	    h3 {
-		font-size: 1.067em;
-	    }
-	}
-    } // End section 4
+.head2 {
+    font-size: 1.5em;
+}
 
+.head2+.head3 {
+   margin-top: 0;
+}
 
-    dt {
-	font-weight: bold;
-	break-after: avoid;
-	margin-top: 2px;
-	margin-bottom: 3px;
+.head3 {
+
+    font-size: 1.333em;
+}
+
+.head4,
+.head5,
+.head6 {
+    color: red;
+    :before {
+	content: "We only allow H1, H2, or H3 headings in body content."
     }
+}
 
-    dd {
-	margin-left: 10px;
-	margin-top: 2px;
-	margin-bottom: 3px;
-    }
+small, .text_small {
+    font-size: 0.889em;
+}
 
-    img {
-	max-width: 100%;
-	max-height: 100%;
-    }
+dd, pre {
+    margin-left: 20px;
+}
 
-    p, li {
-       break-before: avoid;
-    }
+dt {
+   margin-top: 1rem;
+}
 
-    h1, h2, h3, h4, h5, h6 {
-       break-after: avoid;
-    }
+ul {
+   margin-top: 0;
+   margin-bottom: 0;
+}
 
-} // End #body
+article ul li, 
+article ul li p, 
+dd p {
+   margin-top: 0.7rem;
+   margin-bottom: 0.7rem;
+}
 
-.webonly
+.head1 a:link,
+.head2 a:link,
+.head3 a:link {
+   opacity: 0;
+   font-size: 1.33rem;
+   color: dimgrey;
+   text-decoration: none;
+   width: 2.5rem;
+   display: inline-block;
+   vertical-align: middle;
+   text-indent: 0;
+}
+
+.head1:hover a,
+.head2:hover a,
+.head3:hover a
 {
-   display: none;
+   opacity: 1;
 }

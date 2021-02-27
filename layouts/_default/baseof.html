@@ -1,4 +1,5 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" | safeHTML }}
+{{- .Scratch.Set "depth" ( strings.Count "/" .Permalink ) -}}
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ops="http://www.idpf.org/2007/ops"
       xml:lang="{{ .Lang }}">

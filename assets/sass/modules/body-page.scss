@@ -6,11 +6,11 @@
     string-set: front-cover-title content();
 }
 
-#body > .section  > h1.title {
+#body > .section  > .head1.title {
     string-set: chapter content();
 }
 
-#body > .section > .section  > h1.title {
+#body > .section > .section  > .head1.title {
     string-set: section content();
 }
 
