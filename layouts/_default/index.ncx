@@ -12,6 +12,14 @@
 
   <navMap>
   
+    <navPoint id="book-start"
+              playOrder="0">
+      <navLabel>
+        <text>darktable user manual</text>
+      </navLabel>
+      <content src="index.html" />
+    </navPoint>
+
      {{ partial "nav.ncx" . }}
 
   </navMap>

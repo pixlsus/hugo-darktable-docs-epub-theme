@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ops="http://www.idpf.org/2007/ops"
       xml:lang="{{ .Lang }}">
+<head>
+   {{ partial "css.html" . }}
+</head>
     <body>
        <div class="content">
 		    {{ block "main" .}}
