@@ -36,7 +36,7 @@
 {{- $size := .Site.Params.imgsize -}}
 {{- $beginning := "" -}}
 {{- range .Site.Pages.Reverse }}
-   <item href="{{ replace .Permalink "/" "" 1 }}" id="{{ replace .Permalink "/" "_" }}" media-type="application/xhtml+xml" />
+   <item href="{{ replace .Permalink "/" "" 1 }}index.html" id="{{ replace .Permalink "/" "_" }}" media-type="application/xhtml+xml" />
 {{- end }}
 
  </manifest>
