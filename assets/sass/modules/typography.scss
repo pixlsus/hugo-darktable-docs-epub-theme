@@ -111,3 +111,18 @@ dd p {
 {
    opacity: 1;
 }
+
+nav ol,
+nav ol li,
+nav ol li ol
+{
+   list-style-type: none;
+   padding-left: 1em;
+   margin-left: 0;
+   text-indent: 0;
+}
+
+nav ol
+{
+   padding-left: 0em;
+}

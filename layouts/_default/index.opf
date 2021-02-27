@@ -31,6 +31,7 @@
  <manifest>
  
    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+   <item href="toc.xhtml" id="nav" properties="nav" media-type="application/xhtml+xml" />
    <item href="index.html" id="book-start" media-type="application/xhtml+xml" />   
    <item href="style.css" id="styles-css" media-type="text/css"/>
 
@@ -39,6 +40,7 @@
 
 
  <spine toc="ncx">
+   <itemref idref="nav" />   
    <itemref idref="book-start" />   
   {{ partial "spine.opf" . }}
  </spine>
