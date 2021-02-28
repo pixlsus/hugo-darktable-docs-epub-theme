@@ -12,8 +12,16 @@
 
   <navMap>
   
-    <navPoint id="book-start"
+    <navPoint id="cover"
               playOrder="0">
+      <navLabel>
+        <text>darktable user manual</text>
+      </navLabel>
+      <content src="front-cover.html" />
+    </navPoint>
+
+    <navPoint id="book-start"
+              playOrder="1">
       <navLabel>
         <text>darktable user manual</text>
       </navLabel>

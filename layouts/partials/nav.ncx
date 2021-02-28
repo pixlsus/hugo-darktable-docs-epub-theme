@@ -1,4 +1,4 @@
-{{- .Scratch.Set "i" 1 -}}
+{{- .Scratch.Set "i" 2 -}}
 {{- with .Site.GetPage "/" -}}
 {{- template "nav-children" (dict "Section" . "CurrentPage" .) -}}
 {{- end -}}
