@@ -12,7 +12,7 @@
       <navLabel>
         <text>{{ .Title }}</text>
       </navLabel>
-      <content src="{{ replace .Permalink "/" "" 1 }}index.html" />
+      <content src="{{ replace .Permalink "/" "" 1 }}" />
       {{ $i := ( $.CurrentPage.Scratch.Get "i" ) -}}
       {{ $i = add $i 1 -}}
       {{- $.CurrentPage.Scratch.Set "i" $i -}}
@@ -24,7 +24,7 @@
       <navLabel>
         <text>{{ .Title }}</text>
       </navLabel>
-      <content src="{{ replace .Permalink "/" "" 1 }}index.html" />
+      <content src="{{ replace .Permalink "/" "" 1 }}" />
     </navPoint>
     {{ $i := ( $.CurrentPage.Scratch.Get "i" ) -}}
     {{ $i = add $i 1 -}}

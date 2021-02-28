@@ -16,5 +16,5 @@
 {{- /* This comment removes newlines. */ -}}
 {{- end -}}
 {{- /* This comment removes newlines. */ -}}
-<a href="{{ $link | safeURL }}index.html"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $isRemote }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>
+<a href="{{ $link | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $isRemote }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>
 {{- /* This comment removes newlines. */ -}}
