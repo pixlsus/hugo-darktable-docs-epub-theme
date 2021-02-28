@@ -21,25 +21,42 @@ pre, code, kbd {
 p {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    text-indent: 0;
 }
 
 .head1, .head2, .head3, .head4, .head5 {
-    margin: 2.0rem 0 1.0rem;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     line-height: 1.15;
-    text-indent: -2.5rem;
-}
-
-.head1.title {
-    margin-top: 0;
-    margin-left: 2.5rem;
-    margin-bottom: 2rem;
-    font-size: 2em;
 }
 
 .head1 {
     font-size: 1.7em;
+    margin: 0;
+}
+
+.head1.title.depth-1 {
+    margin-top: 0.5em;
+    margin-bottom: 1.2em;
+    font-size: 3em;
+}
+
+.head1.title.depth-2 {
+    margin-top: 0.5em;
+    margin-bottom: 1.2em;
+    font-size: 2.6em;
+}
+
+.head1.title.depth-3,
+.head1.title.depth-4,
+.head1.title.depth-5 {
+    margin-top: 0.5em;
+    margin-bottom: 1.2em;
+    font-size: 2.2em;
 }
 
 .head1+.head2 {
@@ -47,7 +64,7 @@ p {
 }
 
 .head2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 .head2+.head3 {
@@ -56,7 +73,8 @@ p {
 
 .head3 {
 
-    font-size: 1.333em;
+    font-size: 1.2em;
+    font-style: italic;
 }
 
 .head4,
@@ -78,6 +96,7 @@ dd, pre {
 
 dt {
    margin-top: 1rem;
+   font-weight: bold;
 }
 
 ul {
@@ -90,26 +109,6 @@ article ul li p,
 dd p {
    margin-top: 0.7rem;
    margin-bottom: 0.7rem;
-}
-
-.head1 a:link,
-.head2 a:link,
-.head3 a:link {
-   opacity: 0;
-   font-size: 1.33rem;
-   color: dimgrey;
-   text-decoration: none;
-   width: 2.5rem;
-   display: inline-block;
-   vertical-align: middle;
-   text-indent: 0;
-}
-
-.head1:hover a,
-.head2:hover a,
-.head3:hover a
-{
-   opacity: 1;
 }
 
 nav ol,
@@ -130,4 +129,10 @@ nav ol
 .webonly
 {
    display: none;
+}
+
+hr
+{
+   margin-top: 1em;
+   margin-bottom: 1em;
 }
