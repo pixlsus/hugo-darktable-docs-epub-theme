@@ -5,10 +5,10 @@
 {{- define "manifest-children" -}}{{- /* (dict "Section" .Section "CurrentPage" .CurrentPage) */ -}}
    {{- range .Section.Pages -}}
    {{ if .IsSection }}
-   <item href="{{ replace .Permalink "/" "" 1 }}" id="Z_{{ replace .Permalink "/" "_" }}" media-type="application/xhtml+xml" />
+   <item href="{{ replace .Permalink "/" "" 1 }}" id="Z_{{ .File.UniqueID }}" media-type="application/xhtml+xml" />
    {{ template "manifest-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
    {{ else if and .IsPage .Content }}
-   <item href="{{ replace .Permalink "/" "" 1 }}" id="Z_{{ replace .Permalink "/" "_" }}" media-type="application/xhtml+xml" />
+   <item href="{{ replace .Permalink "/" "" 1 }}" id="Z_{{ .File.UniqueID }}" media-type="application/xhtml+xml" />
    {{ end }}
    {{- end -}}
 {{- end -}}
