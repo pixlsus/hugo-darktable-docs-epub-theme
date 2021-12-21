@@ -5,10 +5,10 @@
 {{- define "spine-children" -}}{{- /* (dict "Section" .Section "CurrentPage" .CurrentPage) */ -}}
    {{- range .Section.Pages -}}
    {{ if .IsSection }}
-   <itemref idref="Z_{{ .File.UniqueID }}" />   
+   <itemref idref="Z_{{ with .File }}{{ .UniqueID }}{{ end }}" />   
    {{ template "spine-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
    {{ else if and .IsPage .Content }}
-   <itemref idref="Z_{{ .File.UniqueID }}" />   
+   <itemref idref="Z_{{ with .File }}{{ .UniqueID }}{{ end }}" />   
    {{ end }}
    {{- end -}}
 {{- end -}}
